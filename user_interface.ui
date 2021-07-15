@@ -97,9 +97,9 @@
    <widget class="QTextBrowser" name="tb_information">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>60</y>
-      <width>631</width>
+      <x>20</x>
+      <y>170</y>
+      <width>901</width>
       <height>401</height>
      </rect>
     </property>

@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
         self.btn_select_folder.setFont(font)
         self.btn_select_folder.setObjectName("btn_select_folder")
         self.tb_information = QtWidgets.QTextBrowser(self.centralwidget)
-        self.tb_information.setGeometry(QtCore.QRect(290, 60, 631, 401))
+        self.tb_information.setGeometry(QtCore.QRect(20, 170, 901, 401))
         self.tb_information.setObjectName("tb_information")
         MainWindow.setCentralWidget(self.centralwidget)
 
