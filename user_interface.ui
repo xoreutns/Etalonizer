@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>638</width>
-    <height>451</height>
+    <width>937</width>
+    <height>595</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,44 +28,80 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>250</width>
+      <width>901</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="contextMenuPolicy">
      <enum>Qt::CustomContextMenu</enum>
     </property>
     <property name="text">
-     <string>Выберите папку для анализа</string>
+     <string/>
     </property>
     <property name="readOnly">
      <bool>true</bool>
     </property>
+    <property name="placeholderText">
+     <string>Выберите папку для анализа</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="btn_analyze">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>80</y>
+      <x>170</x>
+      <y>60</y>
       <width>100</width>
-      <height>25</height>
+      <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>Анализировать</string>
+     <string>Анализ</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_select_folder">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>29</y>
-      <width>75</width>
-      <height>23</height>
+      <x>20</x>
+      <y>60</y>
+      <width>100</width>
+      <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
     <property name="text">
-     <string>...</string>
+     <string>Выбрать
+папку</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="tb_information">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>60</y>
+      <width>631</width>
+      <height>401</height>
+     </rect>
     </property>
    </widget>
   </widget>
