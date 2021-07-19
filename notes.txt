@@ -1,0 +1,12 @@
+--python modules:
+pip install PyQt5
+pip install pyqt5-tools
+pip install XlsxWriter
+pip install pandas
+pip install pyinstaller
+
+--command to create exe:
+pyinstaller --add-data optosense.png;. main.py  --noconsole --onefile -i optosense.ico
+
+--command to convert ui to py:
+pyuic5 user_interface.ui -o user_interface.py

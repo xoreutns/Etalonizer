@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from user_interface import Ui_MainWindow  # импорт нашего сгенерированного файла
 import sys
 import os
@@ -14,6 +14,10 @@ class MyWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.btn_select_folder.clicked.connect(self.select_folder)
         self.ui.btn_analyze.clicked.connect(self.analyze_files)
+        self.ui.btn_exit.clicked.connect(sys.exit)
+        script_dir = os.path.dirname(os.path.realpath(__file__))
+        self.setWindowIcon(QtGui.QIcon(script_dir + os.path.sep + 'optosense.png'))
+        self.setFixedSize(self.size())
 
     def select_folder(self):
         folder_name = QtWidgets.QFileDialog.getExistingDirectory(self, 'Выберите папку', '.')
@@ -119,13 +123,14 @@ class MyWindow(QtWidgets.QMainWindow):
                                                                      'Файлы Excel (*.xlsx)')
             # Create a Pandas Excel writer using XlsxWriter as the engine.
             writer = pd.ExcelWriter(result_file_name[0], engine='xlsxwriter')
+            # print(result_file_name[0])
 
             # Convert the dataframe to an XlsxWriter Excel object.
             df.to_excel(writer, sheet_name='Sheet1', index=False)
 
             # Get the xlsxwriter workbook and worksheet objects.
             workbook = writer.book
-            worksheet = writer.sheets['Result']
+            worksheet = writer.sheets['Sheet1']
 
             # Add some cell formats.
             num_format = workbook.add_format({'num_format': '#.###############'})
